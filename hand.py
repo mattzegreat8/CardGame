@@ -8,7 +8,28 @@ class Hand:
 		for suit in self.validSuits:
 			for rank in self.validRanks:
 			    self.value.append(Card(rank,suit))
-    def Cut(self) :
+        def Cut(self):
+    	    first= Hand()
+    	    second= Hand()
+    	    halfway= len(self.value)/2
+    	    first.value= self.value[halfway:]
+    	    second.value= self.value[:halfway]
+    	    self.value= []
+    	    return first,second
+  
+
+
+
+
+
+
+
+
+
+
+
+'''
+    def Cut(self):
         first = Hand()
         second = Hand()
         halfway = len(self.value)/2
@@ -16,3 +37,4 @@ class Hand:
         second.value=self.value[:halfway]
         self.value = []
         return first,second
+'''
