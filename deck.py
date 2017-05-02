@@ -8,7 +8,7 @@ class Deck:
 		self.validRanks=["2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"]
 		for suit in self.validSuits:
 			for rank in self.validRanks:
-			    self.value.append(Card(rank,suit))
+			  self.value.append(Card(rank,suit))
     def DisplayDeck(self):
         for c in self.value:
     	    c.displayCard()
@@ -56,6 +56,9 @@ class Deck:
     def Concat(self,first,second):
     	self.value = first.value + second.value
 
+    def Length(self):
+        return len(self.value)
+
 if(__name__=="__main__"):
     startingDeck = Deck()
     print(len(startingDeck.value))
@@ -65,4 +68,4 @@ if(__name__=="__main__"):
     startingDeck.DisplayDeck()
 
 
-print len(startingDeck.value)
+    print len(startingDeck.value)
