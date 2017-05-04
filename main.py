@@ -4,19 +4,29 @@ from hand import Hand
 
 startdeck= Deck()
 startdeck.Shuffle()
+deck=startdeck.Length()
+
+
+
 first, second= startdeck.Cut()
+plyr1win=first.Length()
+plyr2win=second.Length()
 
 plyr1crd=first.TakeFromTop()
-
-
 plyr2crd=second.TakeFromTop()
 
 
-plyr1win=first.Length()
+'''plyr1win=first.Length()
 plyr2win=second.Length()
 deck=startdeck.Length()
+'''
+while(plyr1win != deck and plyr2win != deck):
 
-if(plyr1win != deck and plyr2win != deck):
+	print(plyr1win)
+	print(plyr2win)
+	print(deck)
+
+
 	plyr1crd=first.TakeFromTop()
 	plyr1crd.displayCard()
 
