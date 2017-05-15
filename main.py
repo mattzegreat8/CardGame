@@ -34,6 +34,7 @@ while(plyr1win != deck and plyr2win != deck):
 	print(plyr2win)
 	print(deck)
 
+	
 	if(plyr1crd>plyr2crd):
 		first.AddToBottom(plyr1crd)
 		first.AddToBottom(plyr2crd)
@@ -49,16 +50,38 @@ while(plyr1win != deck and plyr2win != deck):
 
 		print("Player 2 won that round! He gets both cards!")
 	if(plyr1crd==plyr2crd):
+		
+
 		plyr1crd1=first.TakeFromTop()
-		plyr1crd2=first.TakeFromTop()
-		plyr1crd3=first.TakeFromTop()
-		plyr1crd4=first.TakeFromTop()
-		plyr1crd4.displayCard()
+		plyr1crd1.displayCard()
 		plyr2crd1=second.TakeFromTop()
-		plyr2crd2=second.TakeFromTop()
-		plyr2crd3=second.TakeFromTop()
-		plyr2crd4=second.TakeFromTop()
-		plyr2crd4.displayCard()
+		plyr2crd1.displayCard()
+
+		if(plyr1crd1>plyr2crd1):
+			first.AddToBottom(plyr1crd)
+			first.AddToBottom(plyr1crd1)
+			first.AddToBottom(plyr2crd)
+			first.AddToBottom(plyr2crd1)
+			plyr1win += 4
+			plyr2win -= 4
+			print("Player 1 wins this tie breaker.")
+		if(plyr2crd1>plyr1crd1):
+			second.AddToBottom(plyr1crd)
+			second.AddToBottom(plyr1crd1)
+			second.AddToBottom(plyr2crd)
+			second.AddToBottom(plyr2crd1)
+			plyr1win -= 4
+			plyr2win += 4
+			print("Player 2 wins this tie breaker.")
+		if(plyr1crd1==plyr2crd1):
+			first.AddToBottom(plyr1crd)
+			first.AddToBottom(plyr1crd1)
+			first.AddToBottom(plyr2crd)
+			first.AddToBottom(plyr2crd1)
+			plyr1win += 4
+			plyr2win -= 4
+			print("Player 1 automatically wins this tie since there was 2 ties in a row.")
+
 
 	if(plyr1win == deck):
 		print("Player 1 won the game")
