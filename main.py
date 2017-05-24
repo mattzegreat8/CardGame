@@ -40,13 +40,13 @@ while(plyr1win != deck and plyr2win != deck):
 		first.AddToBottom(plyr2crd)
 
 		plyr1win += 2
-		plyr2win -= 2
+		
 		print("Player 1 won that round! He gets both cards!")
 	if(plyr2crd>plyr1crd):
 		second.AddToBottom(plyr1crd)
 		second.AddToBottom(plyr2crd)
 		plyr2win += 2
-		plyr1win -= 2
+		
 
 		print("Player 2 won that round! He gets both cards!")
 	if(plyr1crd==plyr2crd):
@@ -63,14 +63,14 @@ while(plyr1win != deck and plyr2win != deck):
 			first.AddToBottom(plyr2crd)
 			first.AddToBottom(plyr2crd1)
 			plyr1win += 4
-			plyr2win -= 4
+			
 			print("Player 1 wins this tie breaker.")
 		if(plyr2crd1>plyr1crd1):
 			second.AddToBottom(plyr1crd)
 			second.AddToBottom(plyr1crd1)
 			second.AddToBottom(plyr2crd)
 			second.AddToBottom(plyr2crd1)
-			plyr1win -= 4
+			
 			plyr2win += 4
 			print("Player 2 wins this tie breaker.")
 		if(plyr1crd1==plyr2crd1):
@@ -79,7 +79,7 @@ while(plyr1win != deck and plyr2win != deck):
 			first.AddToBottom(plyr2crd)
 			first.AddToBottom(plyr2crd1)
 			plyr1win += 4
-			plyr2win -= 4
+			
 			print("Player 1 automatically wins this tie since there was 2 ties in a row.")
 
 
